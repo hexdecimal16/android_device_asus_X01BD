@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018-2019 The LineageOS Project
+# Copyright (C) 2018-2019 The AospExtended Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -43,10 +43,8 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/asus/sdm660
-TARGET_KERNEL_CONFIG := etherious_defconfig
+TARGET_KERNEL_CONFIG := m2pro_defconfig
 TARGET_KERNEL_VERSION := 4.4
-TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := 9.0.5
 
 # Assert
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt

@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2018-2019 The AospExtended Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,6 +23,7 @@ PRODUCT_CHARACTERISTICS := nosdcard
 
 # Permissions
 PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
     frameworks/native/data/etc/android.hardware.audio.pro.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.pro.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
@@ -66,19 +67,21 @@ PRODUCT_COPY_FILES += \
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService \
-    com.dsi.ant.antradio_library
-
-PRODUCT_COPY_FILES += \
-    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
+    antradio_app \
+    libantradio
 
 # Audio
 PRODUCT_PACKAGES += \
+    android.hardware.audio@4.0 \
     android.hardware.audio@4.0-impl \
     android.hardware.audio@2.0-service \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@4.0 \
     android.hardware.audio.effect@4.0-impl \
     android.hardware.audio.effect@2.0-service \
     android.hardware.soundtrigger@2.1-impl \
     audio.a2dp.default \
+    audio.primary.sdm660 \
     audio.r_submix.default \
     audio.usb.default \
     libaudio-resampler \
@@ -342,7 +345,8 @@ PRODUCT_PACKAGES += \
 # Keymaster HAL
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
-    android.hardware.keymaster@3.0-service
+    android.hardware.keymaster@3.0-service \
+    android.hardware.keymaster@4.0-service-qti
 
 # Telephony
 PRODUCT_PACKAGES += \
@@ -468,6 +472,10 @@ PRODUCT_PACKAGES += \
 # Touchscreen
 PRODUCT_PACKAGES += \
     libtinyxml2
+
+# Trust HAL
+PRODUCT_PACKAGES += \
+    vendor.lineage.trust@1.0-service
 
 # USB
 PRODUCT_PACKAGES += \
