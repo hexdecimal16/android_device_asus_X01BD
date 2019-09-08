@@ -121,4 +121,10 @@ It allows additional grants on top of privapp-permissions-platform.xml
         <permission name="android.permission.INTERACT_ACROSS_USERS"/>
     </privapp-permissions>
 
+    <privapp-permissions package="com.oneplus.screenrecord">
+        <permission name="android.permission.INSTALL_PACKAGES"/>
+	<permission name="android.permission.CAPTURE_VIDEO_OUTPUT"/>
+	<permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+    </privapp-permissions>
+
 </permissions>
