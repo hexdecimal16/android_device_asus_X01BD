@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/havoc_X01BD.mk
+    $(LOCAL_DIR)/revengeos_X01BD.mk
 
 COMMON_LUNCH_CHOICES := \
-    havoc_X01BD-eng \
-    havoc_X01BD-user \
-    havoc_X01BD-userdebug
+    revengeos_X01BD-eng \
+    revengeos_X01BD-user \
+    revengeos_X01BD-userdebug
