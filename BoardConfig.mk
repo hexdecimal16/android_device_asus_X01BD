@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-COMMON_PATH := device/asus/sdm660-common
+COMMON_PATH := device/asus/X01BD
 
 BOARD_VENDOR := asus
 
@@ -86,6 +86,7 @@ BOARD_KERNEL_IMAGE_NAME  := Image.gz-dtb
 
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_SOURCE := kernel/asus/sdm660
+TARGET_KERNEL_CONFIG := X01BD_defconfig
 
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
@@ -178,4 +179,4 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 
 # Inherit the proprietary files
-include vendor/asus/sdm660-common/BoardConfigVendor.mk
+include vendor/asus/sdm660-common/sdm660-common-vendor.mk
